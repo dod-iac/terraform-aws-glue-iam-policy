@@ -16,6 +16,12 @@ variable "keys" {
   default     = []
 }
 
+variable "databases" {
+  type        = list(string)
+  description = "The ARNs of the AWS Glue Databases.  Use [\"*\"] to allow all databases."
+  default     = []
+}
+
 variable "name" {
   type        = string
   description = "The name of the AWS IAM policy."

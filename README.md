@@ -73,6 +73,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_buckets"></a> [buckets](#input\_buckets) | The ARNs of the AWS S3 buckets the policy is allowed to read from.  Use ["*"] to allow all buckets. | `list(string)` | `[]` | no |
+| <a name="input_databases"></a> [databases](#input\_databases) | The ARNs of the AWS Glue Databases.  Use ["*"] to allow all databases. | `list(string)` | `[]` | no |
 | <a name="input_description"></a> [description](#input\_description) | The description of the AWS IAM policy. | `string` | `""` | no |
 | <a name="input_keys"></a> [keys](#input\_keys) | The ARNs of the AWS KMS keys the policy is allowed to use to decrypt files.  Use ["*"] to allow all keys. | `list(string)` | `[]` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the AWS IAM policy. | `string` | n/a | yes |

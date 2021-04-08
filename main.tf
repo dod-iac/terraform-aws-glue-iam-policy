@@ -77,6 +77,15 @@ data "aws_iam_policy_document" "main" {
     resources = length(var.keys) > 0 ? var.keys : ["*"]
   }
 
+  statement {
+    sid = "GetTable"
+    actions = [
+      "glue:*",
+    ]
+    effect    = length(var.databases) > 0 ? "Allow" : "Deny"
+    resources = length(var.databases) > 0 ? var.databases : ["*"]
+  }
+
 }
 
 resource "aws_iam_policy" "main" {
